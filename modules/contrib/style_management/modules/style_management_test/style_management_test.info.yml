@@ -1,0 +1,13 @@
+name: 'Style Management Test'
+type: module
+# core: '8.x'
+description: 'Test less & scss files'
+package: Testing
+dependencies:
+  - drupal:style_management
+
+# Information added by Drupal.org packaging script on 2018-11-29
+version: '8.x-1.0-beta5'
+core: '8.x'
+project: 'style_management'
+datestamp: 1543498985

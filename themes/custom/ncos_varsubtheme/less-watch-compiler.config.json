@@ -1,0 +1,9 @@
+{
+    "allowedExtensions":[".less"],
+    "enableJs": true,
+    "minified": true,
+    "sourceMap": true,
+    "plugins": "plugin1,plugin2",
+    "watchFolder": "/var/www/html-flanagan-rocks/docroot/themes/custom/ncos_varsubtheme/less",
+    "outputFolder": "/var/www/html-flanagan-rocks/docroot/themes/custom/ncos_varsubtheme/css/compiled"
+}

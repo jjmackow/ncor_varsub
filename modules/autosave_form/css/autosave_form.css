@@ -1,0 +1,14 @@
+#autosave-notification {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: black;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+#autosave-notification:before {
+  content: "\2714";
+  padding-right: 10px;
+}

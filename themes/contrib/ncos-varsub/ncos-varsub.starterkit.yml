@@ -1,0 +1,109 @@
+core: 8.x
+type: theme
+base theme: vartheme
+
+name: 'Vartheme Sub-Theme (LESS)'
+description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
+package: 'Varbase'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+# Bootstrap styles and scripts libraries.
+  - ncos-varsub/bootstrap-styles
+  - ncos-varsub/bootstrap-scripts
+  
+# ncos-varsub custom Vartheme styles and scripts libraries.
+  - ncos-varsub/vartheme-styles
+
+# ncos-varsub global styles and scripts libraries.
+  - ncos-varsub/global-styles
+  - ncos-varsub/global-scripts
+  
+# ncos-varsub Varbase Bootstrap Paragraphs colors theme.
+  - ncos-varsub/vbp-colors
+  
+# ncos-varsub Better Login theme.
+#  - ncos-varsub/betterlogin
+
+# OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
+# Javascript files.
+libraries-override:
+# Comment lines to keep using libraries from vartheme.
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme/bootstrap-styles: false
+  vartheme/bootstrap-scripts: false
+  vartheme/global-styles: false
+  vartheme/global-scripts: false
+
+# Comment lines to use (RTL) libraries from vartheme.
+  vartheme/bootstrap-styles-rtl: false
+  vartheme/global-styles-rtl: false
+# Comment lines to use (RTL) libraries from ncos-varsub.
+  ncos-varsub/bootstrap-styles-rtl: false
+  ncos-varsub/vartheme-styles-rtl: false
+  ncos-varsub/global-styles-rtl: false
+
+# ncos-varsub Varbase Bootstrap Paragraphs colors theme.
+  varbase_bootstrap_paragraphs/vbp-colors: ncos-varsub/vbp-colors
+  vartheme/vbp-colors: ncos-varsub/vbp-colors
+#  vartheme/betterlogin: ncos-varsub/betterlogin
+  
+# Uncomment lines to replace, exclude css and js files from vartheme.
+# You will need to copy less/css files from Vartheme to use theme for the
+# overriden library.
+# ------------------------------------------------------------------------------
+#  vartheme/bs-callouts: ncos-varsub/bs-callouts
+#  vartheme/card: ncos-varsub/card
+#  vartheme/outside-in: ncos-varsub/outside-in
+#  vartheme/edge2edge: ncos-varsub/edge2edge
+#  vartheme/equal-height: ncos-varsub/equal-height
+#  vartheme/navbar-admin: ncos-varsub/navbar-admin
+# ------------------------------------------------------------------------------
+#  vartheme/ajax: ncos-varsub/ajax
+#  vartheme/alert: ncos-varsub/alert
+#  vartheme/field: ncos-varsub/field
+#  vartheme/file: ncos-varsub/file
+#  vartheme/filter: ncos-varsub/filter
+#  vartheme/form: ncos-varsub/form
+#  vartheme/icon: ncos-varsub/icon
+#  vartheme/navbar: ncos-varsub/navbar
+#  vartheme/node: ncos-varsub/node
+#  vartheme/panel: ncos-varsub/panel
+#  vartheme/progress-bar: ncos-varsub/progress-bar
+#  vartheme/table-drag: ncos-varsub/table-drag
+#  vartheme/tabs: ncos-varsub/tabs
+#  vartheme/toolbar: ncos-varsub/toolbar
+#  vartheme/autocomplete: ncos-varsub/autocomplete
+
+#  Uncomment the following if you want to keep bootstrap/framework
+#    and you want to extend it.
+#libraries-extend:
+#  bootstrap/framework:
+#    - vartheme/framework
+#    - ncos-varsub/framework
+
+ckeditor_stylesheets:
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/base/ncos-varsub.base.css
+  - css/theme/content.theme.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
+  - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css

@@ -1,0 +1,12 @@
+name: 'Style Management'
+type: module
+description: 'Manage and compile your LESS & SCSS on System.'
+configure: style_management.settings
+# core: 8.x
+package: 'development'
+
+# Information added by Drupal.org packaging script on 2018-11-29
+version: '8.x-1.0-beta5'
+core: '8.x'
+project: 'style_management'
+datestamp: 1543498985
