@@ -48,7 +48,7 @@ class DataDefinitionFetcherTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp() {
     parent::setUp();
     $this->dataFetcher = $this->container->get('typed_data.data_fetcher');
     $this->typedDataManager = $this->container->get('typed_data_manager');

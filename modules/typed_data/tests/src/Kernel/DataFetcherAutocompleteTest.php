@@ -54,7 +54,7 @@ class DataFetcherAutocompleteTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp() {
     parent::setUp();
 
     $this->installEntitySchema('user');

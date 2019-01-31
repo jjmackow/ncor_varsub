@@ -66,7 +66,7 @@ class PlaceholderResolverTest extends KernelTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp() {
     parent::setUp();
     $this->typedDataManager = $this->container->get('typed_data_manager');
     $this->entityTypeManager = $this->container->get('entity_type.manager');

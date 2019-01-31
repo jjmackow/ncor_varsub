@@ -46,7 +46,7 @@ class TextareaWidgetTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp() {
     parent::setUp();
     $this->widget = $this->getFormWidgetManager()->createInstance('textarea');
   }
