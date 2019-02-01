@@ -129,7 +129,7 @@ class Options
      *
      * @var int
      */
-    private $dpi = 96;
+    private $dpi = 300;
 
     /**
      * A ratio applied to the fonts height to be more like browsers' line height

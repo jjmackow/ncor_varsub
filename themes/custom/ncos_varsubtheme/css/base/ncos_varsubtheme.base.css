@@ -6,10 +6,12 @@ body {
     background-color: #fff;
 }
   
-.main-container.container{
-  padding-top: 30px;
+body.path-frontpage .main-container.container{
+  margin-top: -125px;
 }
-
+body.path-node .main-container{
+  
+}
 .group-overlay{
   background: rgba(green,.9);
   position: absolute;
@@ -29,12 +31,17 @@ body {
 /*
 * DATE day of week (dow)
 */
+.date-dow
+{
+  position: relative;
+
+}
 .date-dow,
 .date-page-a-day{
-  font-size: .8em;  
+  font-size: .8em;
   background: black;
-  width: 5.5em;
-  height: 5.5em;
+  width: 5em;
+  height: 5em;
   padding: .15em .25em;
   margin: 0em .25em 0em 0em;
   display: inline-block;
@@ -51,15 +58,15 @@ body {
   line-height: 1.25em;
   display: block;
 }
-.date-dow b:nth-of-type(1),
+.date-dow>b:nth-of-type(1),
 .date-page-a-day>b:nth-of-type(1){
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
 }
-.date-dow b:nth-of-type(2),
+.date-dow>b:nth-of-type(2),
 .date-page-a-day>b:nth-of-type(2){
-  font-size: 2em; 
+  font-size: 1.5em; 
   margin-right: .125em;
   display: inline-block;
 }
@@ -67,7 +74,7 @@ body {
 .date-page-a-day>b:nth-of-type(3){
   font-size: 1em;
   color: yellow;
-  display: inline-block;
+  display: block;
 }
 .date-dow>b:nth-of-type(4),
 .date-page-a-day>b:nth-of-type(4){
@@ -76,9 +83,10 @@ body {
   display: block;
   position: absolute;
   top:45%;
-  left: 30%;
+  left: 50%;
   background: white;
-  padding: 0 5px;
+  border: 1px solid gray;
+  padding: .15em .25em;
 
   -webkit-border-radius: 5px;
   -moz-border-radius: 15px;
@@ -121,7 +129,7 @@ body {
   display: block;  
 }
 /*
- * MENU styling fixng hte nav-right piece wihtin the region
+ * MENU styling fixng the nav-right piece within the region
 */
 @media (min-width: 768px) {
   .navbar-left {
@@ -177,7 +185,7 @@ body {
 
 */
 @media (max-width: 767px) {
-    
+  
   .menu.menu--secondary-menu{
     background-color:black;
   }
@@ -198,7 +206,6 @@ body {
     -o-border-radius: 0 0 0px 15px;
     border-radius: 0 0 0px 15px;
     -ms-transform: skewX(15deg);
-    margin-left: 5%;
     /*
     * IE 9
     */
@@ -206,7 +213,7 @@ body {
     /*
     * Safari
     */
-    transform: skewX(15deg);
+    transform: skewX(15deg) translateX(-25px);
     max-width: 80%;
   }
   
@@ -343,8 +350,6 @@ body {
        */
       transform: skewX(-30deg);
   }
-
-
 }
 
 /*NAV MENU COLORS*/
@@ -360,6 +365,9 @@ body {
 }
 .menu.menu--secondary-menu li a:before{
   background: #0f5a82;                         /*logo blue*/
+}
+nav .menu {
+  margin: auto 5px;
 }
 nav .menu li{
  padding: 0 15px;   
@@ -402,4 +410,124 @@ nav .menu li a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+/*FRONT PAGE TABS*/
+@media (max-width:640px){
+  .path-frontpage .hero_slider {
+    color: #fff;
+    margin-bottom: 0px;
+    position: relative;
+    top: -60px;
+  }
+}
+.path-frontpage .hero_slider {
+  color: #fff;
+  margin-bottom: 0px;
+  position: relative;
+  top: -100px;
+}
+
+.block-quicktabs-blockfront-page-tabs{
+  margin: auto;
+}
+
+@media (min-width: 768px){
+  .block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs{
+    padding: 0 10%;
+  }  
+}
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul{
+  width: 100%;
+  padding: 0;
+}
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li{
+  width: 32%;
+  margin: 0 .5%;
+  display: inline-block;
+}
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li>a{
+  display: block;
+  color: white;
+  text-shadow: black 0px 0px 0px;
+  font-size: 4.6vw;
+  width:100%;
+  height: 100%;
+  padding:10px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b0d033+0,b0d033+46,b0d033+100&0.42+0,1+61 */
+  background: -moz-linear-gradient(top, rgba(176,208,51,0.42) 0%, rgba(176,208,51,0.86) 46%, rgba(176,208,51,1) 61%, rgba(176,208,51,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(176,208,51,0.42) 0%,rgba(176,208,51,0.86) 46%,rgba(176,208,51,1) 61%,rgba(176,208,51,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(176,208,51,0.42) 0%,rgba(176,208,51,0.86) 46%,rgba(176,208,51,1) 61%,rgba(176,208,51,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bb0d033', endColorstr='#b0d033',GradientType=0 ); /* IE6-9 */
+  color: white;  
+}
+@media (min-width: 1024px){
+  .block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li>a{
+    font-size: 1.3em; 
+  }
+}
+
+
+
+
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li.active a{
+  transform: translateY(10px);
+  background: #b0d033;                         /*logo green*/
+  color: #202f62;
+  text-shadow: white 1px 1px 1px;
+  -webkit-transition-duration: 420ms;
+  -moz-transition-duration: 420ms;
+  -o-transition-duration: 420ms;
+  transition-duration: 420ms;
+
+    -ms-transform: skewX(-15deg) translateX(-25px);
+    /*
+    * IE 9
+    */
+    -webkit-transform: skewX(-15deg) translateX(-25px);
+    /*
+    * Safari
+    */
+    transform: skewX(15deg) translateX(-10px);
+
+  
+}
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li a:focus,
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li a:hover{
+  text-decoration: none;
+}
+#quicktabs-container-front_page_tabs{
+  border: 1px solid #b0d033;                         /*logo green*/
+  padding: 30px 15px 15px 15px;
+  margin: -30px auto 25px;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b0d033+0,b0d033+50,b0d033+100&1+29,0+100 */
+background: -moz-linear-gradient(top, rgba(176,208,51,1) 0%, rgba(176,208,51,1) 29%, rgba(176,208,51,0.7) 50%, rgba(176,208,51,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(176,208,51,1) 0%,rgba(176,208,51,1) 29%,rgba(176,208,51,0.7) 50%,rgba(176,208,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(176,208,51,1) 0%,rgba(176,208,51,1) 29%,rgba(176,208,51,0.7) 50%,rgba(176,208,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0d033', endColorstr='#00b0d033',GradientType=0 ); /* IE6-9 */
+}
+
+/*
+SLICK ANIMATION FRONT PAGE
+
+*/
+@media(max-width:1024px){
+  .slick-list {
+    height: 64vw!important;
+  }  
+}
+/*BLOG Preview Area*/
+.path-frontpage .node--type-varbase-blog.vertical-media-teaser-view-mode .card{
+  border: 0px;
+}
+
+.path-frontpage .node--type-varbase-blog.vertical-media-teaser-view-mode .card .field--name-node-title h3{
+  background: #f1fff0;
+  padding: 0 15px ;
 }

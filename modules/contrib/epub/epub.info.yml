@@ -1,0 +1,12 @@
+name: EPUB
+type: module
+description: 'Display EPUB files in browsers.'
+# core: 8.x
+
+dependencies:
+  - file
+# Information added by Drupal.org packaging script on 2017-12-11
+version: '8.x-1.0'
+core: '8.x'
+project: 'epub'
+datestamp: 1512991388
