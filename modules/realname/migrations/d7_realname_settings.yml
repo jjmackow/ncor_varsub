@@ -1,11 +1,13 @@
-id: d6_realname_settings
-label: Realname 6 configuration
+id: d7_realname_settings
+label: Realname 7 configuration
 migration_tags:
-  - Drupal 6
+  - Drupal 7
+  - Configuration
 source:
   plugin: variable
   variables:
     - realname_pattern
+  source_module: realname
 process:
   pattern:
     plugin: realname_replace_token
