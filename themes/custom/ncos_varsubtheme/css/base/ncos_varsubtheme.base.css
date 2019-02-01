@@ -261,14 +261,13 @@ body {
   .navbar-default .menu.menu--main.navbar-nav > .active > a,
   .navbar-default .menu.menu--main.navbar-nav > .active > a:hover,
   .navbar-default .menu.menu--main.navbar-nav > .active > a:focus {
-    color: #0d3456;                         /*logo green*/
-    font-variant: all-petite-caps;
-    background-color: #b0d03347;
+    color: #b0d033;                         /*logo green*/
+    background-color: rgba(0, 0, 0, .85);
     -webkit-border-radius: 15px 15px 15px 15px;
     -moz-border-radius: 15px 15px 15px 15px;
     -ms-border-radius: 15px 15px 15px 15px;
     -o-border-radius: 15px 15px 15px 15px;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: 15px 15px 15px 15px;
   }
   
   
