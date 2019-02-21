@@ -217,6 +217,20 @@ body.path-node .main-container{
     max-width: 80%;
   }
   
+.list-long-format ol {
+  counter-reset: item
+}
+
+.list-long-format li {
+  display: block
+}
+
+.list-long-format li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item
+}
+  
+  
   #navbar:before{
     -webkit-border-radius: 0 0 15px 0;
     -moz-border-radius: 0 0 15px 0;
