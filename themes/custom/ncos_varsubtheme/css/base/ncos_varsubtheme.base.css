@@ -479,10 +479,6 @@ nav .menu li a:hover:before {
     font-size: 1.3em; 
   }
 }
-
-
-
-
 .block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li.active a{
   transform: translateY(10px);
   background: #b0d033;                         /*logo green*/
@@ -492,18 +488,8 @@ nav .menu li a:hover:before {
   -moz-transition-duration: 420ms;
   -o-transition-duration: 420ms;
   transition-duration: 420ms;
-
-    -ms-transform: skewX(-15deg) translateX(-25px);
-    /*
-    * IE 9
-    */
-    -webkit-transform: skewX(-15deg) translateX(-25px);
-    /*
-    * Safari
-    */
-    transform: skewX(15deg) translateX(-10px);
-
-  
+}
+.block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li.active a{
 }
 .block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li a:focus,
 .block-quicktabs-blockfront-page-tabs #quicktabs-front_page_tabs>ul>li a:hover{
