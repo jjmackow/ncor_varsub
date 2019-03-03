@@ -2,14 +2,7 @@
 
 namespace Drupal\paragraphs_previewer\Plugin\Field\FieldWidget;
 
-use Drupal\paragraphs\Plugin\Field\FieldWidget\ParagraphsWidget;
-use Drupal\Core\Field\FieldDefinitionInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\OpenModalDialogCommand;
-use Drupal\Core\Ajax\AlertCommand;
-use Drupal\Component\Utility\NestedArray;
+use Drupal\paragraphs\Plugin\Field\FieldWidget\InlineParagraphsWidget;
 
 /**
  * Plugin implementation of the 'entity_reference paragraphs' widget.
@@ -23,10 +16,11 @@ use Drupal\Component\Utility\NestedArray;
  *   description = @Translation("An paragraphs inline form widget with a previewer."),
  *   field_types = {
  *     "entity_reference_revisions"
- *   }
+ *   },
+ *   weight = 10
  * )
  */
-class InlineParagraphsPreviewerWidget extends ParagraphsWidget {
+class InlineParagraphsPreviewerWidget extends InlineParagraphsWidget {
 
   use ParagraphsPreviewerWidgetTrait;
 

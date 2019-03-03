@@ -12,15 +12,33 @@ body.path-frontpage .main-container.container{
 body.path-node .main-container{
   
 }
+
+@media (min-width: 1350px){
+  body.top-margin-gap .main-container,
+  .main-container{
+    margin-top: 0px;
+    padding-top: 50px;
+  }  
+}
+
+@media (min-width: 768px) AND (max-width: 1349px){
+  body.top-margin-gap .main-container,
+  .main-container{
+    margin-top: 0px;
+    padding-top: 50px;
+  }  
+}
+
 .group-overlay{
   background: rgba(green,.9);
   position: absolute;
+  z-index: 100;
+  
   top: 0px;
   left: 0px;  
 }
 .group-overlay .field-group-toggler a.field-group-title{
-  color: navy;
-  
+  color: navy;  
 }
 .group-overlay .field-group-toggler a.field-group-title:hover,
 .group-overlay .field-group-toggler a.field-group-title:focus{
@@ -31,8 +49,11 @@ body.path-node .main-container{
 /*
 * DATE day of week (dow)
 */
-.date-dow
-{
+.blog-margin{
+  padding-top: .8em;  
+}
+
+.date-dow{
   position: relative;
 
 }
@@ -143,10 +164,11 @@ body.path-node .main-container{
     margin-right: 0;
   }
 }
-
 /*
 *  Photosphere Navigator
 */
+
+
 .group-overlay.fieldgroup-collapsible{
   
 }
@@ -164,9 +186,6 @@ body.path-node .main-container{
   content: ("- collapse");
   
 }
-
-
-
 .group-overlay.fieldgroup-collapsible.collapsed .field-group-toggler a{
   content: ("+ expand");
 
@@ -179,6 +198,55 @@ body.path-node .main-container{
  make the font 1em for hte title and make it Small Caps*/
    
 }
+
+/* ****************************
+****    Global Page Footer ****
+**************************** */
+.page-node-type-photosphere .footer-wrapper{
+  background-color: transparent;
+  position: absolute;
+  bottom: 5vw;
+  left: 0;
+}
+.page-node-type-photosphere .col-sm-12{
+  position: inherit;
+}
+.page-node-type-photosphere .region-footer{
+  position: relative;
+}
+.page-node-type-photosphere .region-footer #block-ncos-varsubtheme-copyright{
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 100px
+}
+.page-node-type-photosphere .region-footer #block-ncos-varsubtheme-copyright .field--name-body{
+  color: black;  
+  background: rgba(255,255,255,.4);
+  padding: 4px 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* future proofing */
+  
+}
+/*
+* horizontal menus
+* 
+*/
+.un-published.main-content>.card{
+  border: red dotted 3px;
+  background-color: rgba(255, 55, 55, 0.1);
+}
+.horizontal-menu>.menu{
+  padding-top: .5em;
+  text-align: center;
+}
+.horizontal-menu>.menu>li{
+  display: inline-block;
+  width: 12em;
+}
+
+
 
 /*
 * Menus - top set

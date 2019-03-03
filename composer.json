@@ -6,11 +6,7 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "drupal/style_management": "^1.0@beta",
-        "dompdf/dompdf": "0.8.0",
-        "tecnickcom/tcpdf": "~6",
-        "mikehaertl/phpwkhtmltopdf": "~2.1",
-        "drupal/diff": "^1.0@RC"
+        "fileeye/mimemap": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.6"

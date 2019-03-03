@@ -3,6 +3,7 @@
   position: fixed;
   bottom: 5px;
   right: 5px;
+  z-index: 9999;
   background-color: black;
   color: white;
   padding: 0.5em 1em;
