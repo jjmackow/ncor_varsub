@@ -6,7 +6,8 @@
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
-        "fileeye/mimemap": "^1.0"
+        "fileeye/mimemap": "^1.0",
+        "drupal/image_widget_crop": "^2.2"
     },
     "replace": {
         "drupal/core": "^8.6"

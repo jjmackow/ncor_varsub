@@ -13,6 +13,9 @@ body.path-node .main-container{
   
 }
 
+body.user-logged-in.navbar-is-fixed-top header.navbar-fixed-top {
+  top: 0;
+}
 @media (min-width: 1350px){
   body.top-margin-gap .main-container,
   .main-container{
@@ -59,10 +62,10 @@ body.path-node .main-container{
 }
 .date-dow,
 .date-page-a-day{
-  font-size: .8em;
+  font-size: .7em;
   background: black;
-  width: 5em;
-  height: 5em;
+  width: 4.5em;
+  height: 4.5em;
   padding: .15em .25em;
   margin: 0em .25em 0em 0em;
   display: inline-block;
@@ -76,7 +79,7 @@ body.path-node .main-container{
 .date-page-a-day>b{
   font-size: 1em; 
   color: white;
-  line-height: 1.25em;
+  line-height: 1em;
   display: block;
 }
 .date-dow>b:nth-of-type(1),
@@ -125,8 +128,6 @@ body.path-node .main-container{
   content: ""
 }
 
-
-
 /*
 * DATE page a day
 */
@@ -136,6 +137,23 @@ body.path-node .main-container{
 }
 .row.view-varbase-blog.view-id-varbase_blog.view-display-id-homepage_blog_block>div{
   float: left!important;
+}
+
+.btn a,
+a.btn{
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition-duration: 420ms;
+}
+.btn a:hover,
+.btn a:focus,
+a.btn:hover,
+a.btn:focus
+{
+  color: yellow;
 }
 
 .blog-listing .view-footer .btn.btn-link{
@@ -167,10 +185,14 @@ body.path-node .main-container{
 /*
 *  Photosphere Navigator
 */
-
-
-.group-overlay.fieldgroup-collapsible{
-  
+body.page-node-type-photosphere .group-overlay.fieldgroup-collapsible>.field-group-wrapper>.well{
+  background: linear-gradient(to bottom right, rgba(255, 128, 0, .1),rgba(255, 128, 0, 1) 20%, rgba(0,0,0,0));
+  padding: 5px 15px;
+  border-radius: 10px; /* future proofing */
+  box-shadow: 5px px 5px rgba(0,0,0,.8);    
+}
+.group-overlay.fieldgroup-collapsible .views-element-container{
+  background: none;
 }
 .group-overlay.fieldgroup-collapsible .field-group-toggler{
   -ms-transform: translate(0px, 1em); /* IE 9 */
@@ -196,8 +218,8 @@ body.path-node .main-container{
 .group-overlay.fieldgroup-collapsible .field-group-wrapper .well{
  /*add rounded corners and make the well a dim seethrough black;
  make the font 1em for hte title and make it Small Caps*/
-   
 }
+
 
 /* ****************************
 ****    Global Page Footer ****
@@ -227,7 +249,6 @@ body.path-node .main-container{
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px; /* future proofing */
-  
 }
 /*
 * horizontal menus
@@ -509,6 +530,85 @@ nav .menu li a:hover:before {
   top: -100px;
 }
 
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  color: rgb(226, 225, 225);
+  text-shadow: #797070 2px 2px 2px;
+ }
+ .views-element-container{
+  background-image: linear-gradient(to bottom, rgb(222, 222, 222), rgb(255, 255, 255));
+  padding: 15px;
+  
+ }
+ .group-overlay h2,
+ .block > h2{
+    color: rgb(164, 164, 164);
+    text-shadow: #312d3f 2px 2px 2px;
+    
+    font-weight: 700;
+ }
+.blog-listing .node--type-varbase-blog .card-text{
+  color: rgb(38, 38, 38);
+  line-height:22px;
+  font-size: 16px;
+}
+.blog-listing .node--type-varbase-blog{
+  border-radius: 10px;
+}
+.blog-listing .node--type-varbase-blog h4 {
+  color: rgb(0,0,0);  
+  font-weight: 600;
+}
+.blog-listing .node--type-varbase-blog h5 {
+  color: rgb(0,0,0);  
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 767px) {
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+    font-size: 3.3rem;
+   }
+}
+@media screen and (min-width: 768px) {
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h2,
+  .varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content .field--name-node-title h3 {
+    font-size: 36px;
+    
+  }
+  .group-overlay h2,
+  .block > h2{
+    font-size: 30px;    
+  }
+  .blog-listing .node--type-varbase-blog h4 {
+    font-size: 20px;
+  }
+  .blog-listing .node--type-varbase-blog h5 {
+    font-size: 18px;
+  }
+
+}
+
+ul.links li{
+  margin:auto 15px;
+}
+
 .block-quicktabs-blockfront-page-tabs{
   margin: auto;
 }
@@ -585,6 +685,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0d033', end
 SLICK ANIMATION FRONT PAGE
 
 */
+.varbase-heroslider-media .node--type-varbase-heroslider-media .hero-slide-content>.container>.row
+{
+  background: linear-gradient(to bottom right, rgba(75, 75, 75,.2), rgba(0,0,0,0));
+  transform: skewX(-5deg);
+  padding: 5px 15px;
+  border-radius: 10px; /* future proofing */
+  box-shadow: -5px -5px 5px rgba(0,0,0,.8);
+}
+
+
+
 @media(max-width:1024px){
   .slick-list {
     height: 64vw!important;
@@ -598,4 +709,10 @@ SLICK ANIMATION FRONT PAGE
 .path-frontpage .node--type-varbase-blog.vertical-media-teaser-view-mode .card .field--name-node-title h3{
   background: #f1fff0;
   padding: 0 15px ;
+}
+/*
+adjusting Headlines and text (FP Blog)
+*/
+.vertical-media-teaser-view-mode.large .field--name-node-title h3 {
+  font-size: 1.2em;
 }

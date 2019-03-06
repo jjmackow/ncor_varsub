@@ -35,7 +35,7 @@
       set title_classes = [
         'field-label-' ~ element['#label_display']|clean_class,
       ]
-    %}
+    %}got here
     {%- if settings['lbw-def-at'] -%}
       <{{ settings['lbw-el']|default('div') }} {{ label_attributes.addClass(title_classes).mergeAttributes(title_attributes) }}>
     {%- else -%}

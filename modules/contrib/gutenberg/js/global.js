@@ -8,11 +8,12 @@
 (function (Drupal, drupalSettingsl, $) {
   var types = {
     page: {
+      id: 1,
       labels: {
         Document: Drupal.t('Node'),
         document: Drupal.t('Node'),
-        posts: Drupal.t('Nodes'),
-        extras: Drupal.t('Fields') },
+        posts: Drupal.t('Nodes')
+      },
       name: 'Page',
       rest_base: 'pages',
       slug: 'page',
@@ -20,17 +21,14 @@
         author: false,
         comments: false,
         'custom-fields': true,
-        document: false,
         editor: true,
-        'media-library': false,
+        excerpt: false,
+        discussion: false,
         'page-attributes': false,
-        posts: false,
         revisions: false,
-        'template-settings': false,
         thumbnail: false,
-        title: false,
-        extras: false
-      },
+        title: false },
+      taxonomies: [],
       viewable: false,
       saveable: false,
       publishable: false,
@@ -40,14 +38,14 @@
       capabilities: {},
       name: 'Blocks',
       rest_base: 'blocks',
-      slug: 'wp_block',
+      slug: 'block',
       description: '',
       hierarchical: false,
       supports: {
         title: true,
         editor: true
       },
-      viewable: false
+      viewable: true
     }
   };
 
@@ -106,7 +104,7 @@
         return new Promise(function (resolve, reject) {
           $.ajax({
             method: 'GET',
-            url: drupalSettings.path.baseUrl + 'editor/image/load/' + matches[1],
+            url: drupalSettings.path.baseUrl + 'editor/media/load/' + matches[1],
             accepts: {
               json: 'application/json, text/javascript, */*; q=0.01'
             }
@@ -164,7 +162,7 @@
 
           $.ajax({
             method: 'POST',
-            url: drupalSettings.path.baseUrl + 'editor/image/upload/gutenberg',
+            url: drupalSettings.path.baseUrl + 'editor/media/upload/gutenberg',
 
             data: formData,
             processData: false,
@@ -177,6 +175,15 @@
           }).fail(function (err) {
             reject(err);
           });
+        });
+      }
+    },
+    'load-medias': {
+      method: 'GET',
+      regex: /\/wp\/v2\/media/g,
+      process: function process() {
+        return new Promise(function (resolve) {
+          resolve([]);
         });
       }
     },
@@ -194,7 +201,24 @@
       regex: /\/wp\/v2\/users\/\?(.*)/g,
       process: function process() {
         return new Promise(function (resolve) {
-          resolve([]);
+          resolve([{
+            id: 1,
+            name: 'Human Made',
+            url: '',
+            description: '',
+            link: 'https://demo.wp-api.org/author/humanmade/',
+            slug: 'humanmade',
+            avatar_urls: {
+              24: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=24&d=mm&r=g',
+              48: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=48&d=mm&r=g',
+              96: 'http://2.gravatar.com/avatar/83888eb8aea456e4322577f96b4dbaab?s=96&d=mm&r=g'
+            },
+            meta: [],
+            _links: {
+              self: [],
+              collection: []
+            }
+          }]);
         });
       }
     },
@@ -251,7 +275,8 @@
           return resolve([{
             theme_supports: {
               formats: ['standard', 'aside', 'image', 'video', 'quote', 'link', 'gallery', 'audio'],
-              'post-thumbnails': true
+              'post-thumbnails': true,
+              'responsive-embeds': false
             }
           }]);
         });
@@ -436,7 +461,6 @@
   }
 
   window.wp = {
-    apiFetch: apiFetch,
-    url: { addQueryArgs: addQueryArgs }
+    apiFetch: apiFetch
   };
 })(Drupal, drupalSettings, jQuery);

@@ -255,7 +255,9 @@
         allowedBlockTypes: true,
         disableCustomColors: false,
         disablePostFormats: false,
-        mediaLibrary: false,
+        mediaLibrary: true,
+        // See issue: https://www.drupal.org/project/gutenberg/issues/3035313
+        imageSizes: drupalSettings.gutenberg['image-sizes'],
         titlePlaceholder: Drupal.t('Add title'),
         bodyPlaceholder: Drupal.t('Add text or type / to add content'),
         isRTL: false,
@@ -302,10 +304,10 @@
               $('.edit-post-sidebar .components-panel').append($tabD);
             }, 0);
 
-            $(document.body).addClass('gutenberg-sidedar-open');
+            $(document.body).addClass('gutenberg-sidebar-open');
           },
           CLOSE_GENERAL_SIDEBAR: () => {
-            $(document.body).removeClass('gutenberg-sidedar-open');
+            $(document.body).removeClass('gutenberg-sidebar-open');
             // Move tab before sidebar is "destroyed".
             $('.gutenberg-sidebar').append(
               $('.edit-post-sidebar .components-panel .tab'),

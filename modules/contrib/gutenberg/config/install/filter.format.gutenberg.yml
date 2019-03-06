@@ -1,11 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - gutenberg
   enforced:
     module:
       - gutenberg
+  module:
+    - editor
+    - gutenberg
 name: 'Gutenberg Blocks text format'
 format: gutenberg
 weight: 0

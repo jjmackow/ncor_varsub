@@ -187,6 +187,10 @@ body .gutenberg__editor .edit-post-layout .edit-post-header {
 
 .edit-post-sidebar select {
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 0px 5px;
+  line-height: 1.3em;
 }
 
 .gutenberg-sidebar {
@@ -230,10 +234,6 @@ body .gutenberg__editor .edit-post-layout .edit-post-sidebar {
 
 .wp-block-embed iframe {
   border: none;
-}
-
-.editor-block-contextual-toolbar .editor-block-toolbar button[aria-label="Edit image"] {
-  display: none;
 }
 
 .editor-rich-text__tinymce[data-is-placeholder-visible="true"] {

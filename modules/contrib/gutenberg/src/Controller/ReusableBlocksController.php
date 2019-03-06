@@ -28,9 +28,12 @@ class ReusableBlocksController extends ControllerBase {
       $block = BlockContent::load($block_id);
 
       return new JsonResponse([
-        'id' => $block->id(),
+        'id' => (int) $block->id(),
         'title' => ['raw' => $block->info->value],
-        'content' => ['raw' => $block->body->value],
+        'content' => ['protected' => false, 'raw' => $block->body->value],
+        'type' => 'block',
+        'status' => 'publish',
+        'slug' => 'reusable_block_' . $block->id(),
       ]);
     }
 
@@ -43,9 +46,12 @@ class ReusableBlocksController extends ControllerBase {
 
     foreach ($blocks as $key => $block) {
       $result[] = [
-        'id' => $block->id(),
+        'id' => (int) $block->id(),
         'title' => ['raw' => $block->info->value],
-        'content' => ['raw' => $block->body->value],
+        'content' => ['protected' => false, 'raw' => $block->body->value],
+        'type' => 'block',
+        'status' => 'publish',
+        'slug' => 'reusable_block_' . $block->id(),
       ];
     }
 
@@ -85,7 +91,7 @@ class ReusableBlocksController extends ControllerBase {
     $block->save();
 
     return new JsonResponse([
-      'id' => $block->id(),
+      'id' => (int) $block->id(),
       'title' => ['raw' => $block->info->value],
       'content' => ['raw' => $block->body->value],
     ]);
@@ -107,7 +113,7 @@ class ReusableBlocksController extends ControllerBase {
     $block->delete();
 
     return new JsonResponse([
-      'id' => $block_id,
+      'id' => (int) $block_id,
     ]);
   }
 

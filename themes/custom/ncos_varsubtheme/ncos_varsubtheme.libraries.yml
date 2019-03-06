@@ -38,7 +38,7 @@ slick-animation:
     base:
         css/component/slick-animation.css: {}
   js:
-    js/slick-animation/js: {}
+    js/slick-animation.js: {}
   dependencies:
     - core/jquery
       

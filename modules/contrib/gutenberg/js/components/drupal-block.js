@@ -30,7 +30,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
       key: 'render',
       value: function render() {
         if (this.props.blockContent) {
-          return React.createElement('div', { className: this.props.className, dangerouslySetInnerHTML: { __html: this.props.blockContent.html } });
+          return React.createElement(
+            'div',
+            null,
+            React.createElement('div', { className: this.props.className, dangerouslySetInnerHTML: { __html: this.props.blockContent.html } })
+          );
         }
 
         return React.createElement(
@@ -51,9 +55,20 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
     var id = props.id;
 
+    var block = getBlock(id);
+    var node = document.createElement('div');
+
+    if (block && block.html) {
+      node.innerHTML = block.html;
+      var formElements = node.querySelectorAll('input, select, button, textarea');
+      formElements.forEach(function (element) {
+        element.setAttribute('readonly', true);
+        element.setAttribute('required', false);
+      });
+    }
 
     return {
-      blockContent: getBlock(id) };
+      blockContent: { html: node.innerHTML } };
   })(DrupalBlock);
 
   window.DrupalGutenberg = window.DrupalGutenberg || {};

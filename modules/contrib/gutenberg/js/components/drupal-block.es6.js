@@ -7,7 +7,9 @@
     render() {
       if (this.props.blockContent) {
         return (
-          <div className={this.props.className} dangerouslySetInnerHTML={{__html: this.props.blockContent.html}} />
+          <div>
+            <div className={this.props.className} dangerouslySetInnerHTML={{__html: this.props.blockContent.html}} />
+          </div>
         );
       }
 
@@ -20,9 +22,20 @@
   const createClass = withSelect((select, props) => {
     const { getBlock } = select('drupal');
     const { id } = props;
+    const block = getBlock(id);
+    const node = document.createElement('div');
+
+    if (block && block.html) {
+      node.innerHTML = block.html;
+      const formElements = node.querySelectorAll('input, select, button, textarea');
+      formElements.forEach(element => {
+        element.setAttribute('readonly', true);
+        element.setAttribute('required', false);
+      });
+    }
 
     return {
-      blockContent: getBlock(id), // `/editor/blocks/load/${blockId}`
+      blockContent: { html: node.innerHTML }//getBlock(id), // `/editor/blocks/load/${blockId}`
     };
   })(DrupalBlock);
 

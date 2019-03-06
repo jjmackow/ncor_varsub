@@ -40,6 +40,7 @@ libraries:
 
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
+
 libraries-override:
 # Comment lines to keep using libraries from vartheme.
   bootstrap_library/bootstrap-cdn: false
@@ -89,7 +90,7 @@ libraries-override:
 #  vartheme/tabs: ncos_varsubtheme/tabs
 #  vartheme/toolbar: ncos_varsubtheme/toolbar
 #  vartheme/autocomplete: ncos_varsubtheme/autocomplete
-
+        
 #  Uncomment the following if you want to keep bootstrap/framework
 #    and you want to extend it.
 #libraries-extend:
