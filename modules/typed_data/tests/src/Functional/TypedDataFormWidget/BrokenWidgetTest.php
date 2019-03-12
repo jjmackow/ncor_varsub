@@ -46,7 +46,7 @@ class BrokenWidgetTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  public function setUp() {
     parent::setUp();
     $this->widget = $this->getFormWidgetManager()->createInstance('broken');
   }

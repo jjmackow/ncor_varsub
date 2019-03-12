@@ -47,7 +47,7 @@ class SelectWidgetTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  public function setUp() {
     parent::setUp();
     $this->widget = $this->getFormWidgetManager()->createInstance('select');
   }
