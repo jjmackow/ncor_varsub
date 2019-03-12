@@ -10,7 +10,9 @@
         "drupal/image_widget_crop": "^2.2",
         "dompdf/dompdf": "0.8.0",
         "drupal/diff": "^1.0@RC",
-        "drupal/graphql": "^3.0@RC"
+        "drupal/graphql": "^3.0@RC",
+        "drupal/reactify": "^1.0",
+        "drupal/webpack": "^1.0@alpha"
     },
     "replace": {
         "drupal/core": "^8.6"
